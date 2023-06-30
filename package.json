@@ -24,6 +24,7 @@
     "/public/build"
   ],
   "dependencies": {
+    "@14islands/lerp": "github:14islands/lerp",
     "@box2d/core": "^0.10.0",
     "@pixi/react": "^7.1.0",
     "@prisma/client": "^4.15.0",
@@ -36,9 +37,12 @@
     "ammojs3": "^0.0.8",
     "bcryptjs": "^2.4.3",
     "isbot": "^3.6.10",
+    "lerp": "^1.0.3",
+    "mathjs": "^11.8.2",
     "matter-attractors": "^0.1.6",
     "matter-js": "^0.19.0",
     "p2": "^0.7.1",
+    "p5": "^1.6.0",
     "pixi.js": "^7.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -58,6 +62,7 @@
     "@types/eslint": "^8.40.1",
     "@types/lodash": "^4.14.195",
     "@types/node": "^18.16.17",
+    "@types/p5": "^1.6.2",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
     "@vitejs/plugin-react": "^4.0.0",
