@@ -1,0 +1,6 @@
+{
+  "prettier.requireConfig": true,
+  "prettier.semi": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.configPath": ".prettierrc"
+}
