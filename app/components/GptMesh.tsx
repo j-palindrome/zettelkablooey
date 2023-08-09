@@ -6,7 +6,7 @@ import { Fragment, Suspense, cloneElement, useMemo } from 'react'
 import { useDimensions } from '~/services/dom.client'
 import LoopedGraphics from './LoopedGraphics'
 import MyLink from './MyLink'
-import { text } from '~/routes/demos.zettelkablooey._index'
+import { text } from '~/routes/_index'
 import MorphSpan from './MorphSpan'
 
 export default function GptMesh(props: Parameters<typeof ClientGptMesh>[0]) {
