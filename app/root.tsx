@@ -27,7 +27,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className='h-full bg-black font-serif text-white'>
+      <body className='h-screen w-screen bg-black font-serif text-white'>
         <Link
           className='absolute left-0 top-0 z-50 m-4'
           to='/demos/zettelkablooey'

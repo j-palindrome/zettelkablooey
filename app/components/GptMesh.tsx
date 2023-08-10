@@ -6,8 +6,8 @@ import { Fragment, Suspense, cloneElement, useMemo } from 'react'
 import { useDimensions } from '~/services/dom.client'
 import LoopedGraphics from './LoopedGraphics'
 import MyLink from './MyLink'
-import { text } from '~/routes/_index'
 import MorphSpan from './MorphSpan'
+import { index } from '~/routes/demos.zettelkablooey'
 
 export default function GptMesh(props: Parameters<typeof ClientGptMesh>[0]) {
   return (
@@ -85,7 +85,7 @@ function ClientGptMesh({
         const splitChildren = child.props.children.split(' ')
         const link = _.random(splitChildren.length)
         const newLink = (
-          <MyLink to={'/demos/zettelkablooey/' + _.sample(text)?.id}>
+          <MyLink to={'/demos/zettelkablooey/' + _.sample(index)?.id}>
             {splitChildren[link]}
           </MyLink>
         )
