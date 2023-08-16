@@ -1,7 +1,7 @@
 import { useLoaderData } from '@remix-run/react'
 import { isErrorResponse } from '@remix-run/react/dist/data'
 import { OpenAIApi, Configuration } from 'openai'
-import { readResponse, writeResponse } from './data.server'
+import { readResponse } from './data.server'
 
 /**
  * @borrows This only works inside useLoaderData
@@ -16,32 +16,33 @@ export const generatePrompt = async (
     stream: false,
   }
 ) => {
-  const openai = new OpenAIApi(
-    new Configuration({ apiKey: process.env.GPT_SECRET })
-  )
+  // const openai = new OpenAIApi(
+  //   new Configuration({ apiKey: process.env.GPT_SECRET })
+  // )
 
-  const newResponse = async () => {
-    const response =
-      (
-        await openai.createChatCompletion({
-          model: 'gpt-3.5-turbo',
-          messages: [
-            {
-              role: 'user',
-              content: prompt,
-            },
-          ],
-          ...config,
-        })
-      ).data.choices[0].message?.content ?? ''
+  // const newResponse = async () => {
+  //   const response =
+  //     (
+  //       await openai.createChatCompletion({
+  //         model: 'gpt-3.5-turbo',
+  //         messages: [
+  //           {
+  //             role: 'user',
+  //             content: prompt,
+  //           },
+  //         ],
+  //         ...config,
+  //       })
+  //     ).data.choices[0].message?.content ?? ''
 
-    if (response) writeResponse(prompt, response)
+  //   if (response) writeResponse(prompt, response)
 
-    return response
-  }
-  const response = newResponse()
+  //   return response
+  // }
+  // const response = newResponse()
 
-  return readResponse(prompt) || (await response)
+  // return readResponse(prompt) || (await response)
+  return readResponse(prompt as any)
 
   // const data = (
   //   await openai.createChatCompletion(

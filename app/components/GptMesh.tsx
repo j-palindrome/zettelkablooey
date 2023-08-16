@@ -7,7 +7,6 @@ import { useDimensions } from '~/services/dom.client'
 import LoopedGraphics from './LoopedGraphics'
 import MyLink from './MyLink'
 import MorphSpan from './MorphSpan'
-import { index } from '~/routes/demos.zettelkablooey'
 
 export default function GptMesh(props: Parameters<typeof ClientGptMesh>[0]) {
   return (
@@ -56,7 +55,7 @@ function ClientGptMesh({
   if (!formattedGptText) return <></>
   return (
     <div className='h-full w-full overflow-hidden'>
-      <Stage
+      {/* <Stage
         className='absolute left-0 top-0 z-0 bg-transparent'
         width={w}
         height={h}
@@ -80,14 +79,12 @@ function ClientGptMesh({
             }
           }}
         />
-      </Stage>
+      </Stage> */}
       {children.map((child, i) => {
         const splitChildren = child.props.children.split(' ')
         const link = _.random(splitChildren.length)
         const newLink = (
-          <MyLink to={'/demos/zettelkablooey/' + _.sample(index)?.id}>
-            {splitChildren[link]}
-          </MyLink>
+          <MyLink to={'/demos/zettelkablooey/'}>{splitChildren[link]}</MyLink>
         )
         return (
           <Fragment key={i}>

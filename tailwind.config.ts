@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         serif: 'Times New Roman',
+        mono: 'Kanit',
       },
     },
   },
