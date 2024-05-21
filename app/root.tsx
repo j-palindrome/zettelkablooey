@@ -8,8 +8,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  Link,
 } from '@remix-run/react'
-import { Link } from 'react-router-dom'
 
 import stylesheet from '~/tailwind.css'
 

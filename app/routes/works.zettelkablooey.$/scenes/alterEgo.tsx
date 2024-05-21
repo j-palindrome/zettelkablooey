@@ -1,4 +1,4 @@
-import Kablooey from '~/components/Kablooey'
+import Kablooey from '~/routes/works.zettelkablooey.$/components/Kablooey'
 
 export default function Assured({ gptText, showEffect, index }: Props) {
   return (

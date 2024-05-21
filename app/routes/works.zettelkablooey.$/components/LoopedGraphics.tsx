@@ -1,7 +1,7 @@
 import { Graphics, useTick } from '@pixi/react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Graphics as PixiGraphics } from 'pixi.js'
-import { useDimensions } from '~/services/dom.client'
+import { useDimensions } from '~/routes/works.zettelkablooey.$/services/dom.client'
 import { makeNoise3D } from 'open-simplex-noise'
 import invariant from 'tiny-invariant'
 

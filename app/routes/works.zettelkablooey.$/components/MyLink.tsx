@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useFlicker } from '~/services/animation'
+import { Link } from '@remix-run/react'
+import { useFlicker } from '~/routes/works.zettelkablooey.$/services/animation'
 
 export default function MyLink({
   to,

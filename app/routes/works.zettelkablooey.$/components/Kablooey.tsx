@@ -3,12 +3,18 @@ import { Link, Outlet, useLoaderData, useLocation } from '@remix-run/react'
 import _ from 'lodash'
 import { Vector } from 'matter-js'
 import { useMemo, useState } from 'react'
-import { scenes } from '~/routes/works.zettelkablooey.$'
-import { useFlicker, useFlickers } from '~/services/animation'
-import { useDimensions, useMousePosition } from '~/services/dom.client'
-import { lerp } from '~/services/math'
-import { convertTextToLines } from '~/services/parser'
-import { useFakeStream } from '~/services/text.client'
+import { scenes } from '~/routes/works.zettelkablooey.$/route'
+import {
+  useFlicker,
+  useFlickers,
+} from '~/routes/works.zettelkablooey.$/services/animation'
+import {
+  useDimensions,
+  useMousePosition,
+} from '~/routes/works.zettelkablooey.$/services/dom.client'
+import { lerp } from '~/routes/works.zettelkablooey.$/services/math'
+import { convertTextToLines } from '~/routes/works.zettelkablooey.$/services/parser'
+import { useFakeStream } from '~/routes/works.zettelkablooey.$/services/text.client'
 import LoopedGraphics from './LoopedGraphics'
 import { Stage } from '@pixi/react'
 import { BlurFilter } from 'pixi.js'
